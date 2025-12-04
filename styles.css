@@ -1,0 +1,155 @@
+:root {
+    --clr_primary: #B77224;
+    --clr_bg: #F8D3A7;
+    --clr_border: #111;
+}
+
+* {
+    font-family: 'Roboto', 'Noto Sans Georgian', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--clr_bg);
+    background-image: radial-gradient(#ffb46a 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding: .5rem;
+}
+
+.txt {
+    display: inline-flex;
+    flex-direction: column;
+    gap: .1rem;
+}
+
+.txt>span {
+    font-size: .8rem;
+}
+
+input {
+    font-size: 1rem;
+    border: 2px solid var(--clr_primary);
+    background: azure;
+    padding: .25rem .5rem;
+    border-radius: .2rem;
+    width: 100%;
+}
+
+input:focus {
+    border-color: var(--clr_border);
+    outline: 2px solid var(--clr_border);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: azure;
+    border: 1px solid var(--clr_primary);
+}
+
+th {
+    color: azure;
+    background-color: var(--clr_primary);
+    padding: .2rem 0;
+    font-size: .9rem;
+    font-weight: normal;
+}
+
+td {
+    border: 1px solid var(--clr_primary);
+}
+
+td input {
+    border: none;
+    background: none;
+    border-radius: .2rem;
+}
+
+
+td input:focus {
+    border-color: var(--clr_border);
+    outline: 4px solid var(--clr_border);
+}
+
+button {
+    border: none;
+    border-radius: 0rem;
+    background: none;
+    border: 2px solid var(--clr_border);
+    width: 2.5rem;
+    height: 2rem;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color ease 250ms;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+div#logo {
+    position: fixed;
+    inset: 0;
+    background-color: var(--clr_bg);
+    background-image: url("/icon.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: anCloseLogo ease 250ms 500ms forwards;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    margin: auto;
+    max-width: 700px;
+    margin-top: 1rem;
+}
+
+span#lblTotalPrice {
+    font-weight: bold;
+}
+
+div#total {
+    background: var(--clr_border);
+    color: #fafafa;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 1.1rem;
+}
+
+@keyframes anCloseLogo {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.5);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        margin-top: 0;
+    }
+
+    label.txt {
+        width: 100%;
+    }
+}

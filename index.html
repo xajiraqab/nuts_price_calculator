@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NPC</title>
+    <meta name="description" content="თხილის ფასის კალკულატ2" />
+    <link rel="icon" href="favicon.ico" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="თხილის ფასის კალკულატ2" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NPC — თხილის ფასის კალკულატ2" />
+    <meta property="og:description" content="თხილის ფასის კალკულატ2" />
+    <meta
+      property="og:url"
+      content="https://xajiraqab.github.io/nuts_price_calculator/"
+    />
+    <meta property="og:image" content="/nuts_price_calculator/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="nuts_price_calculator — თხილის ფასის კალკულატ2"
+    />
+    <meta name="twitter:description" content="თხილის ფასის კალკულატ2" />
+    <meta name="twitter:image" content="/nuts_price_calculator/logo.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+Georgian:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h3>თხილის ფასის კალკულატ2</h3>
+      <label class="txt">
+        <span>ფასი (100%)</span>
+        <input id="txtUnitPrice" inputmode="decimal" />
+      </label>
+      <table>
+        <thead></thead>
+        <tbody>
+          <tr>
+            <th>%</th>
+            <th>წონა (კგ)</th>
+            <th>ფასი (₾)</th>
+            <th>✖</th>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="addRow()">+</button>
+      <div id="total">ჯამი: <span id="lblTotalPrice">0</span>₾</div>
+      <div id="logo"></div>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
