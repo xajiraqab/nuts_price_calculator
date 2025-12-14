@@ -101,7 +101,7 @@ div#logo {
     position: fixed;
     inset: 0;
     background-color: var(--clr_bg);
-    background-image: url("/nuts_price_calculator/icon.png");
+    background-image: url("/nuts_price_calculator/icon.svg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
